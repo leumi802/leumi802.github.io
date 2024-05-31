@@ -1,0 +1,170 @@
+html {
+	height: 100%;
+}
+
+body {
+	position: relative;
+	padding-bottom: 80px;
+	font-size: 14px;
+	line-height: 1.8;
+	background-color: #ffffff;
+	min-height: 100%;
+	color: #000000;
+}
+  
+.navbar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 16px;
+    border-bottom: 1px solid black;
+}
+
+.navbar-toggle {
+    border: 1px solid darkgray;
+    margin: 20px;
+    display: none;
+}
+
+.home-link {
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.home-link:hover {
+    color: blue;
+}
+  
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+  
+.navbar li {
+    margin-left: 20px;
+}
+  
+.navbar li a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+}
+  
+.navbar li a:hover {
+    color: blue;
+}
+  
+.navbar li a.active {
+    font-weight: 600;
+}
+
+.content > div {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    display: none;
+}
+
+.content > div.active {
+    display: block;
+}
+
+#main {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.introduce {
+    flex-grow: 1; 
+}
+
+#main img {
+    float: left;
+    max-width: 30%;
+    padding: 20px;
+}
+
+#hobby img {
+    max-width: 30%;
+    padding: 20px;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0px;
+	height: 60px;
+	width: 100%;
+	font-size: 14px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	background-color:#fcfcfc;
+	border-top: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+
+    #main {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    #main img {
+        width: 100%; 
+        max-width: none; 
+        margin-bottom: 20px;
+    }
+    
+    #hobby img {
+        width: 100%;
+        max-width: none;
+    }
+
+    .content > div {
+        padding-top: 60px; 
+    }
+}
+
+@media (max-width: 700px) {
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column; 
+        width: 100%;
+        background-color: white;
+        position: absolute; 
+        top: 60px; 
+        left: 0;
+        z-index: 999; 
+        border-top: 1px solid black;
+    }
+
+    .navbar ul {
+        display: block;
+        width: 100%;
+    }
+
+    .navbar li {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        border-bottom: 1px solid black; 
+    }
+
+    .navbar li a {
+        padding: 15px 10px;
+    }
+}
